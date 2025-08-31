@@ -6,7 +6,7 @@ This is a SEE - HCMIU Web Rework Concept.
 
 ### Features
 
-[ ] Feature list will be coming soon
+- [ ] Feature list will be coming soon
 
 ### Tech stack
 
