@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -13,8 +14,11 @@ export default function ProtectedRootLayout({
 }>) {
   return (
     <html lang="en">
+      <head />
       <body className={`${poppins.className} ${poppins.variable} antialiased`}>
-        {children}
+        <ThemeProvider attribute={"class"} defaultTheme={"system"} enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
