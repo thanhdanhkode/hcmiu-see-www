@@ -3,33 +3,42 @@ import { Headset, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { MdiFacebook } from '@/components/icons/Facebook'
 import { MdiYoutube } from '@/components/icons/Youtube'
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { MdiZalo } from '@/components/icons/Zalo'
+import { MdiQrcodeScan } from '@/components/icons/QR'
 
 export const Footer = () => {
+  const t = useTranslations('Footer')
   return (
     <footer className="overflow-hidden w-full">
-      <div className="mx-auto px-3 max-w-screen-xl select-none py-3">
+      <div className="mx-auto px-3 max-w-screen-xl select-none">
         <div className="grid grid-cols-7 py-3 pb-12 gap-3">
-          <div className="col-span-3 flex gap-3 items-center">
+          <div className="col-span-5 flex gap-3 items-center">
             <div className="size-18 p-2 flex items-center justify-center rounded-full [&>svg]:size-10 aspect-square border-4 border-[#670210] text-[#670210]">
               <Headset />
             </div>
             <div className="">
-              <div className="font-medium">Liên hệ với chúng tôi qua</div>
-              <div className="">Hotline: {process.env.CALL_HOTLINE}</div>
-              <div className="">Tư vấn Tuyển sinh: {process.env.CALL_CONSULTATION}</div>
+              <div className="font-medium">{t('Contact.title')}</div>
+              <div className="">{t('Contact.Hotline', { call: `${process.env.CALL_HOTLINE || 'xx xxxxxxxxx'}` })}</div>
+              <div className="">
+                {t('Contact.Consultation', { call: `${process.env.CALL_CONSULTATION || 'contact@example.com'}` })}
+              </div>
             </div>
           </div>
           <div className="">
-            <div className="font-medium">Theo dõi chúng tôi qua</div>
-            <div className="flex items-center gap-2">
+            <div className="font-medium">{t('SocialMedia.title')}</div>
+            <div className="flex items-center gap-2 mt-1">
               <MdiFacebook />
               <MdiYoutube />
+              <MdiZalo />
+              <MdiQrcodeScan />
             </div>
           </div>
         </div>
         <Separator />
         <div className="grid grid-cols-7 py-6">
-          <div className="flex flex-col w-120">
+          <div className="col-span-3 flex flex-col">
             <div className="flex gap-1">
               <Image
                 src={'/assets/IULogo.png'}
@@ -45,16 +54,123 @@ export const Footer = () => {
               />
             </div>
             <div className="text-sm text-nowrap mt-2 font-medium">
-              <div>Trường ĐH Quốc Tế - ĐHQG Thành phố Hồ Chí Minh</div>
-              <div>Khoa Điện - Điện tử</div>
+              <div>{t('Logo.UniversityName')}</div>
+              <div>{t('Logo.DepartmentName')}</div>
             </div>
             <div className="mt-3">
-              <div className="[&_svg]:size-4">
+              <div className="[&_svg]:size-4 flex items-center text-sm leading-4">
                 <MapPin />
-                <span>Phòng A2.206</span>
+                <span>{t('Location.room')}</span>
               </div>
             </div>
           </div>
+          <div className="col-span-2">
+            <div className="font-medium">
+              <span>{t('Service.title')}</span>
+            </div>
+            <ul className="mt-1 flex flex-col gap-2">
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.EdusoftWeb')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.EdusoftMaster')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.Library')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.Blackboard')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.ITSupport')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.StudentMail')}</span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-2">
+            <div className="font-medium">
+              <span>{t('Other.title')}</span>
+            </div>
+            <ul className="mt-1 flex flex-col gap-2">
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.EdusoftWeb')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.EdusoftMaster')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.Library')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.Blackboard')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.ITSupport')}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={''}>
+                  <div className="text-sm">
+                    <span>{t('Service.StudentMail')}</span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <Separator />
+        <div className="text-sm text-center py-6 flex items-center justify-center">
+          <span>
+            {t('Copyright', {
+              year: new Date().getFullYear(),
+              name: 'School of Electrical Engineering Rework by thanhdanhkode',
+            })}
+          </span>
         </div>
       </div>
     </footer>
