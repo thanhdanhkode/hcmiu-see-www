@@ -1,34 +1,60 @@
+'use client'
+
+import { Locale, useLocale } from 'next-intl'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, SelectLabel } from './ui/select'
 import Image from 'next/image'
+import { useTransition } from 'react'
+import { usePathname, useRouter } from '@/i18n/navigation'
+import { useParams } from 'next/navigation'
 
 export const LanguageSwitcher = () => {
+  const router = useRouter()
+  const [isPending, startTransition] = useTransition()
+  const pathname = usePathname()
+  const params = useParams()
+  const locale = useLocale()
+
+  const onLanguageSelectChange = (value: string) => {
+    const locale = value as Locale
+
+    startTransition(() => {
+      router.push(
+        // @ts-expect-error
+        { pathname, params },
+        { locale }
+      )
+    })
+  }
   return (
-    <Select defaultValue="vi">
-      <SelectTrigger className="w-auto [&>svg]:hidden px-2">
+    <Select
+      defaultValue={locale}
+      onValueChange={(value) => onLanguageSelectChange(value)}
+    >
+      <SelectTrigger className="w-auto [&_span]:hidden [&>svg]:hidden px-2">
         <SelectValue />
       </SelectTrigger>
       <SelectContent className="w-fit min-w-0">
         <SelectGroup>
           <SelectLabel>Ngôn ngữ</SelectLabel>
           <SelectItem value="vi">
-            <div className="flex justify-center items-center">
-              <Image
-                src={'/assets/VietnamFlag.png'}
-                alt="Vi"
-                width={32}
-                height={21}
-              />
-            </div>
+            <Image
+              src={'/assets/VietnamFlag.png'}
+              alt="Vi"
+              width={32}
+              height={21}
+              className="rounded"
+            />
+            <span>Tiếng Việt</span>
           </SelectItem>
           <SelectItem value="en">
-            <div className="flex justify-center items-center">
-              <Image
-                src={'/assets/USAFlag.png'}
-                alt="USA"
-                width={32}
-                height={17}
-              />
-            </div>
+            <Image
+              src={'/assets/USAFlag.png'}
+              alt="USA"
+              width={32}
+              height={17}
+              className="rounded"
+            />
+            <span>English</span>
           </SelectItem>
         </SelectGroup>
       </SelectContent>

@@ -1,5 +1,5 @@
 import Link from './Link'
-import { NavigationMenuLink } from './ui/navigation-menu'
+import { NavigationMenuLink, NavigationMenuTrigger } from './ui/navigation-menu'
 
 interface INavigationMenuItem {
   href: string
@@ -10,7 +10,6 @@ export const NavigationMenuLocalizedLink = ({ href, title }: INavigationMenuItem
   return (
     <Link
       href={href}
-      legacyBehavior
       passHref
     >
       <NavigationMenuLink>{title}</NavigationMenuLink>
