@@ -31,10 +31,10 @@ export const Header = (props: { children?: React.ReactNode }) => {
           <div className="flex-1"></div>
           <div className="flex items-center text-sm gap-3">
             <div className="[&_svg]:size-5 flex items-center gap-1">
-              <Phone /> ***REMOVED***
+              <Phone /> {process.env.CALL_CONSULTATION}
             </div>
             <div className="[&_svg]:size-5 flex items-center gap-1">
-              <Mail /> ***REMOVED***
+              <Mail /> {process.env.EMAIL}
             </div>
           </div>
         </div>

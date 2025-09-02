@@ -15,8 +15,8 @@ export const Footer = () => {
             </div>
             <div className="">
               <div className="font-medium">Liên hệ với chúng tôi qua</div>
-              <div className="">Hotline: ***REMOVED***</div>
-              <div className="">Tư vấn Tuyển sinh: ***REMOVED***</div>
+              <div className="">Hotline: {process.env.CALL_HOTLINE}</div>
+              <div className="">Tư vấn Tuyển sinh: {process.env.CALL_CONSULTATION}</div>
             </div>
           </div>
           <div className="">
