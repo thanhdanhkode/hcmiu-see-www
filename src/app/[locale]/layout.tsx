@@ -28,7 +28,9 @@ export default async function PublicRootLayout({
       suppressHydrationWarning
     >
       <head />
-      <body className={` ${roboto.className} ${roboto.variable} antialiased`}>
+      <body
+        className={` ${roboto.className} ${roboto.variable} antialiased relative w-screen h-screen`}
+      >
         <NextIntlClientProvider>
           <ThemeProvider
             attribute={'class'}
