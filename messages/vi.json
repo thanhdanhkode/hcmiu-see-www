@@ -1,1 +1,31 @@
-{}
+{
+  "Header": {
+    "Logo": {
+      "DepartmentName": "Khoa Kỹ thuật Điện - Điện tử",
+      "UniversityName": "Trường Đại học Quốc tế - ĐHQG TP.HCM"
+    },
+    "Navigation": {
+      "Home": {
+        "title": "Trang chủ"
+      },
+      "Admission": {
+        "title": "Tuyển sinh"
+      },
+      "Students": {
+        "title": "Tuyển sinh"
+      },
+      "Academic": {
+        "title": "Đào tạo"
+      },
+      "Research": {
+        "title": "Nghiên cứu"
+      }
+    },
+    "Languages": {
+      "title": "Ngôn ngữ"
+    }
+  },
+  "Footer": {
+    
+  }
+}
