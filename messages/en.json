@@ -3,6 +3,106 @@
     "Logo": {
       "DepartmentName": "School of Electrical Engineering",
       "UniversityName": "International University - Vietnam National University HCMC"
+    },
+    "Navigation": {
+      "Home": {
+        "title": "Home",
+        "name": {
+          "school": "School of",
+          "department": "Electrical Engineering"
+        },
+        "Greeting": "Greeting from Head of Department",
+        "History": "history of formation and development",
+        "Vision": "Vision & Mission",
+        "PhE": "Philosophy of Education"
+      },
+      "Admission": {
+        "title": "Admission",
+        "Info": {
+          "Latest": "Admission Information {year}"
+        },
+        "University": {
+          "EE": "Electrical Engineering",
+          "AC": "Automatic Control Engineering"
+        }
+      },
+      "Student": {
+        "title": "Student",
+        "AcademicAdvisor": "Academic Advisor",
+        "Handbook": "Student Handbook",
+        "StudentLife": "Student Life",
+        "Clubs": "Clubs"
+      },
+      "Academic": {
+        "title": "Academic",
+        "Undergraduate": "Undergraduate",
+        "Postgraduate": "Postgraduate",
+        "Support": "Support"
+      },
+      "Research": {
+        "title": "Research",
+        "Laboratories": "Laboratories",
+        "Workshops": "Workshops",
+        "TechnologyTransfer": "Technology Transfer",
+        "Publications": "Publications"
+      },
+      "Bulletin": {
+        "title": "Bulletin"
+      }
+    },
+    "Action": {
+      "login": "Login"
+    },
+    "Languages": {
+      "title": "Languages"
+    }
+  },
+  "Footer": {
+    "Contact": {
+      "title": "Contact us via",
+      "Hotline": "Hotline: {call}",
+      "Consultation": "Admission consultation: {call}"
+    },
+    "SocialMedia": {
+      "title": "Follow us on"
+    },
+    "Logo": {
+      "DepartmentName": "School of Electrical Engineering",
+      "UniversityName": "International University - Vietnam National University HCMC"
+    },
+    "Location": {
+      "room": "Room A2.206"
+    },
+    "Service": {
+      "title": "Online Services",
+      "EdusoftWeb": "EdusoftWeb",
+      "EdusoftMaster": "EdusoftMaster",
+      "Library": "Library",
+      "Blackboard": "Blackboard",
+      "ITSupport": "IT Support",
+      "StudentMail": "Student Email"
+    },
+    "Other": {
+      "title": "Other"
+    },
+    "Copyright": "Copyright © {year} {name}. All rights reserved."
+  },
+  "Landing": {
+    "Course": {
+      "title": "Our Featured Courses",
+      "action": {
+        "view": "View more"
+      },
+      "EE": {
+        "name": "Electrical Engineering",
+        "description": "Learn about electrical systems, circuits, and technology."
+      },
+      "AC": {
+        "name": "Automatic Control Engineering",
+        "description": "Learn about control systems, automation, and robotics."
+      },
+      "Twining": { "name": "Twining Programs", "description": "Learn about our international twinning programs." },
+      "MS": { "name": "Master's Programs", "description": "Learn about our master's degree offerings." }
     }
   }
 }

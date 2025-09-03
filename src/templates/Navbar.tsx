@@ -72,10 +72,10 @@ export const Navbar = () => {
             className="bg-transparent"
             onClick={() => router.replace('/', { locale })}
           >
-            Trang chủ
+            {t('Navigation.Home.title')}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-100 lg:grid-cols-[.75fr_0.05fr_1fr]">
+            <ul className="grid w-max lg:grid-cols-[.75fr_0.05fr_1fr]">
               <li className="row-span-4">
                 <NavigationMenuLink asChild>
                   <div className="h-full font-medium flex flex-col justify-end">
@@ -86,8 +86,8 @@ export const Navbar = () => {
                       height={64}
                       className="mb-3"
                     />
-                    <span className="text-xs leading-4">School of</span>
-                    <span className="text-sm leading-5 text-nowrap">Electrical Engineering</span>
+                    <span className="text-xs leading-4">{t('Navigation.Home.name.school')}</span>
+                    <span className="text-sm leading-5 text-nowrap">{t('Navigation.Home.name.department')}</span>
                   </div>
                 </NavigationMenuLink>
               </li>
@@ -97,65 +97,65 @@ export const Navbar = () => {
               <ListItem
                 variant={'title'}
                 href=""
-                title="Lời chào Trường khoa"
+                title={t('Navigation.Home.Greeting')}
               />
               <ListItem
                 variant={'title'}
                 href=""
-                title="Lịch sử hình thành & phát triển"
+                title={t('Navigation.Home.History')}
               />
               <ListItem
                 variant={'title'}
                 href=""
-                title="Tầm nhìn & Sứ mệnh"
+                title={t('Navigation.Home.Vision')}
               />
               <ListItem
                 variant={'title'}
                 href=""
-                title="Triết lí giáo dục"
+                title={t('Navigation.Home.PhE')}
               />
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">Tuyển sinh</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent">{t('Navigation.Admission.title')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-max">
-              <ListItem href="/admission/info/latest">Thông tin tuyển sinh 2025</ListItem>
-              <ListItem href="/admission/university/ee">Kỹ thuật Điện tử - Viễn thông</ListItem>
-              <ListItem href="/admission/university/ac">Kỹ thuật Điều khiển - Tự động hóa</ListItem>
+              <ListItem href="/admission/info/latest">{t('Navigation.Admission.Info.Latest', { year: 2025 })}</ListItem>
+              <ListItem href="/admission/university/ee">{t('Navigation.Admission.University.EE')}</ListItem>
+              <ListItem href="/admission/university/ac">{t('Navigation.Admission.University.AC')}</ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">Sinh viên</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent">{t('Navigation.Student.title')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-max">
-              <ListItem href="/students/academic-advisor">Cố vấn học tập</ListItem>
-              <ListItem href="/students/academic-advisor">Sổ tay sinh viên</ListItem>
-              <ListItem href="/students/academic-advisor">Đời sống sinh viên</ListItem>
-              <ListItem href="/students/academic-advisor">Câu lạc bộ</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Student.AcademicAdvisor')}</ListItem>
+              <ListItem href="/students/handbook">{t('Navigation.Student.Handbook')}</ListItem>
+              <ListItem href="/students/student-life">{t('Navigation.Student.StudentLife')}</ListItem>
+              <ListItem href="/students/clubs">{t('Navigation.Student.Clubs')}</ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">Đào tạo</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent">{t('Navigation.Academic.title')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-max">
-              <ListItem href="/students/academic-advisor">Đại học</ListItem>
-              <ListItem href="/students/academic-advisor">Sau đại học</ListItem>
-              <ListItem href="/students/academic-advisor">Hỗ trợ</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Academic.Undergraduate')}</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Academic.Postgraduate')}</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Academic.Support')}</ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">Nghiên cứu</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent">{t('Navigation.Research.title')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-max">
-              <ListItem href="/students/academic-advisor">Phòng thí nghiệm</ListItem>
-              <ListItem href="/students/academic-advisor">Xưởng Cơ - Điện</ListItem>
-              <ListItem href="/students/academic-advisor">Chuyển giao công nghệ</ListItem>
-              <ListItem href="/students/academic-advisor">Công bố khoa học</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Research.Laboratories')}</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Research.Workshops')}</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Research.TechnologyTransfer')}</ListItem>
+              <ListItem href="/students/academic-advisor">{t('Navigation.Research.Publications')}</ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -169,7 +169,7 @@ export const Navbar = () => {
               className="contents"
             >
               <div className="font-medium text-nowrap">
-                <span>Bảng tin</span>
+                <span>{t('Navigation.Bulletin.title')}</span>
               </div>
             </Link>
           </NavigationMenuLink>

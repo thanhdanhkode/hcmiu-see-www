@@ -6,26 +6,104 @@
     },
     "Navigation": {
       "Home": {
-        "title": "Trang chủ"
+        "title": "Trang chủ",
+        "name": {
+          "school": "Khoa",
+          "department": "Điện - Điện tử"
+        },
+        "Greeting": "Lời chào từ Trưởng khoa",
+        "History": "Lịch sử hình thành và phát triển",
+        "Vision": "Tầm nhìn & Sứ mệnh",
+        "PhE": "Triết lý giáo dục"
       },
       "Admission": {
-        "title": "Tuyển sinh"
+        "title": "Tuyển sinh",
+        "Info": {
+          "Latest": "Thông tin tuyển sinh {year}"
+        },
+        "University": {
+          "EE": "Kỹ thuật Điện tử - Viễn thông",
+          "AC": "Kỹ thuật Điều khiển và Tự động hóa"
+        }
       },
-      "Students": {
-        "title": "Tuyển sinh"
+      "Student": {
+        "title": "Sinh viên",
+        "AcademicAdvisor": "Cố vấn học tập",
+        "Handbook": "Sổ tay sinh viên",
+        "StudentLife": "Đời sống sinh viên",
+        "Clubs": "Câu lạc bộ"
       },
       "Academic": {
-        "title": "Đào tạo"
+        "title": "Đào tạo",
+        "Undergraduate": "Đại học",
+        "Postgraduate": "Sau đại học",
+        "Support": "Hỗ trợ"
       },
       "Research": {
-        "title": "Nghiên cứu"
+        "title": "Nghiên cứu",
+        "Laboratories": "Phòng thí nghiệm",
+        "Workshops": "Xưởng Cơ - Điện",
+        "TechnologyTransfer": "Chuyển giao công nghệ",
+        "Publications": "Công bố khoa học"
+      },
+      "Bulletin": {
+        "title": "Bảng tin"
       }
+    },
+    "Action": {
+      "login": "Đăng nhập"
     },
     "Languages": {
       "title": "Ngôn ngữ"
     }
   },
   "Footer": {
-    
+    "Contact": {
+      "title": "Liên hệ với chúng tôi qua",
+      "Hotline": "Hotline: {call}",
+      "Consultation": "Tư vấn tuyển sinh: {call}"
+    },
+    "SocialMedia": {
+      "title": "Theo dõi chúng tôi qua"
+    },
+    "Logo": {
+      "DepartmentName": "Khoa Kỹ thuật Điện - Điện tử",
+      "UniversityName": "Trường Đại học Quốc tế - ĐHQG TP.HCM"
+    },
+    "Location": {
+      "room": "Phòng A2.206"
+    },
+    "Service": {
+      "title": "Dịch vụ trực tuyến",
+      "EdusoftWeb": "EdusoftWeb",
+      "EdusoftMaster": "EdusoftMaster",
+      "Library": "Thư viện",
+      "Blackboard": "Blackboard",
+      "ITSupport": "Hỗ trợ CNTT",
+      "StudentMail": "Email sinh viên"
+    },
+    "Other": {
+      "title": "Khác",
+      "Other1": "Khác 1"
+    },
+    "Copyright": "Bản quyền © {year} {name}. Bảo lưu mọi quyền."
+  },
+  "Landing": {
+    "Course": {
+      "title": "Các chương trình đào tạo nổi bật",
+      "action": {
+        "view": "Xem thêm"
+      },
+      "EE": {
+        "name": "Kỹ thuật Điện tử - Viễn thông",
+        "description": "Tìm hiểu về các hệ thống điện, mạch điện và công nghệ."
+      },
+      "AC": {
+        "name": "Kỹ thuật Điều khiển Tự động hóa",
+        "description": "Tìm hiểu về các hệ thống điều khiển, tự động hóa và robot."
+      },
+      "Twining": { "name": "Chương trình liên kết", "description": "Tìm hiểu về các chương trình liên kết quốc tế của chúng tôi." },
+      "MS": { "name": "Chương trình Thạc sĩ", "description": "Tìm hiểu về các chương trình thạc sĩ của chúng tôi." }
+    }
   }
 }

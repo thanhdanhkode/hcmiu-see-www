@@ -1,11 +1,12 @@
 'use client'
 
-import { Locale, useLocale } from 'next-intl'
+import { Locale, useLocale, useTranslations } from 'next-intl'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, SelectLabel } from './ui/select'
 import Image from 'next/image'
 import { useTransition } from 'react'
 import { usePathname, useRouter } from '@/i18n/navigation'
 import { useParams } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
 export const LanguageSwitcher = () => {
   const router = useRouter()
@@ -13,6 +14,7 @@ export const LanguageSwitcher = () => {
   const pathname = usePathname()
   const params = useParams()
   const locale = useLocale()
+  const t = useTranslations('Header')
 
   const onLanguageSelectChange = (value: string) => {
     const locale = value as Locale
@@ -30,12 +32,17 @@ export const LanguageSwitcher = () => {
       defaultValue={locale}
       onValueChange={(value) => onLanguageSelectChange(value)}
     >
-      <SelectTrigger className="w-auto [&_span]:hidden [&>svg]:hidden px-2">
+      <SelectTrigger
+        className={cn(
+          isPending && 'transition-opacity [&:disabled]:opacity-30',
+          'w-auto [&_span]:hidden [&>svg]:hidden px-2'
+        )}
+      >
         <SelectValue />
       </SelectTrigger>
       <SelectContent className="w-fit min-w-0">
         <SelectGroup>
-          <SelectLabel>Ngôn ngữ</SelectLabel>
+          <SelectLabel>{t('Languages.title')}</SelectLabel>
           <SelectItem value="vi">
             <Image
               src={'/assets/VietnamFlag.png'}

@@ -31,10 +31,10 @@ export const Header = (props: { children?: React.ReactNode }) => {
           <div className="flex-1"></div>
           <div className="flex items-center text-sm gap-3">
             <div className="[&_svg]:size-5 flex items-center gap-1">
-              <Phone /> +84 919 966 848
+              <Phone /> {process.env.CALL_CONSULTATION || 'xx xxxxxxxxx'}
             </div>
             <div className="[&_svg]:size-5 flex items-center gap-1">
-              <Mail /> see_info@hcmiu.edu.vn
+              <Mail /> {process.env.EMAIL || 'contact@example.com'}
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ export const Header = (props: { children?: React.ReactNode }) => {
             asChild
           >
             <NextLink href="/login">
-              <LogIn /> Đăng nhập
+              <LogIn /> {t('Action.login')}
             </NextLink>
           </Button>
         </div>
