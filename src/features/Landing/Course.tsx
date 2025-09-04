@@ -8,10 +8,10 @@ export const Course = ({ courses }: { courses: any[] }) => {
   const t = useTranslations('Landing')
   return (
     <>
-      <div className="w-full flex justify-center items-center text-4xl font-bold my-6">
+      <div className="w-full flex justify-center items-center text-2xl sm:text-4xl font-bold my-6">
         <span>{t('Course.title')}</span>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
         {courses.map((course, index) => (
           <Card
             key={index}
@@ -26,10 +26,10 @@ export const Course = ({ courses }: { courses: any[] }) => {
                   src={course.image}
                   alt=""
                   fill
-                  objectFit="cover"
+                  className="object-cover"
                 />
               </AspectRatio>
-              <div className="text-lg font-medium mt-6">
+              <div className="text-lg font-medium mt-6 line-clamp-2">
                 <span>{t(`Course.${course.id}.name`)}</span>
               </div>
               <div className="text-sm mt-1 line-clamp-3">

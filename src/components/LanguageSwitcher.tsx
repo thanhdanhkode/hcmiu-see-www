@@ -33,10 +33,7 @@ export const LanguageSwitcher = () => {
       onValueChange={(value) => onLanguageSelectChange(value)}
     >
       <SelectTrigger
-        className={cn(
-          isPending && 'transition-opacity [&:disabled]:opacity-30',
-          'w-auto [&_span]:hidden [&>svg]:hidden px-2'
-        )}
+        className={cn(isPending && 'transition-opacity [&:disabled]:opacity-30', '[&_span]:font-medium w-auto [&>svg]:hidden px-2')}
       >
         <SelectValue />
       </SelectTrigger>

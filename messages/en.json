@@ -87,6 +87,35 @@
     },
     "Copyright": "Copyright © {year} {name}. All rights reserved."
   },
+  "NavigationMobile": {
+    "Home": {
+      "title": "Home"
+    },
+    "Menu": {
+      "title": "Menu",
+      "drawer": {
+        "Logo": {
+          "DepartmentName": "School of Electrical Engineering",
+          "UniversityName": "International University - Vietnam National University HCMC"
+        },
+        "Navigation": {
+          "title": "Navigation",
+          "Home": {
+            "title": "Home"
+          }
+        },
+        "Languages": {
+          "title": "Languages"
+        }
+      }
+    },
+    "Bulletin": {
+      "title": "Bulletin"
+    },
+    "Login": {
+      "title": "Login"
+    }
+  },
   "Landing": {
     "Course": {
       "title": "Our Featured Courses",

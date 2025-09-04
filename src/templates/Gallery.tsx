@@ -15,7 +15,7 @@ export const Gallery = ({ images }: { images: string[] }) => {
           <CarouselItem
             key={index}
           >
-            <div className='w-full relative h-160 rounded-lg overflow-hidden'>
+            <div className='w-full relative h-60 md:h-160 rounded-lg overflow-hidden'>
             <Image
               src={image}
               alt={`Gallery image ${index + 1}`}
@@ -26,8 +26,8 @@ export const Gallery = ({ images }: { images: string[] }) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className='hidden sm:flex'/>
+      <CarouselNext className='hidden sm:flex'/>
     </Carousel>
   )
 }

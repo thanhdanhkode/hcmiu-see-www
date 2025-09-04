@@ -88,6 +88,35 @@
     },
     "Copyright": "Bản quyền © {year} {name}. Bảo lưu mọi quyền."
   },
+  "NavigationMobile": {
+    "Home": {
+      "title": "Trang chủ"
+    },
+    "Menu": {
+      "title": "Mục lục",
+      "drawer": {
+        "Logo": {
+          "DepartmentName": "Khoa Kỹ thuật Điện - Điện tử",
+          "UniversityName": "Trường Đại học Quốc tế - ĐHQG TP.HCM"
+        },
+        "Navigation": {
+          "title": "Điều hướng",
+          "Home": {
+            "title": "Trang chủ"
+          }
+        },
+        "Languages": {
+          "title": "Ngôn ngữ"
+        }
+      }
+    },
+    "Bulletin": {
+      "title": "Bảng tin"
+    },
+    "Login": {
+      "title": "Đăng nhập"
+    }
+  },
   "Landing": {
     "Course": {
       "title": "Các chương trình đào tạo nổi bật",
@@ -102,8 +131,14 @@
         "name": "Kỹ thuật Điều khiển Tự động hóa",
         "description": "Tìm hiểu về các hệ thống điều khiển, tự động hóa và robot."
       },
-      "Twining": { "name": "Chương trình liên kết", "description": "Tìm hiểu về các chương trình liên kết quốc tế của chúng tôi." },
-      "MS": { "name": "Chương trình Thạc sĩ", "description": "Tìm hiểu về các chương trình thạc sĩ của chúng tôi." }
+      "Twining": {
+        "name": "Chương trình liên kết",
+        "description": "Tìm hiểu về các chương trình liên kết quốc tế của chúng tôi."
+      },
+      "MS": {
+        "name": "Chương trình Thạc sĩ - BS & MS",
+        "description": "Tìm hiểu về các chương trình thạc sĩ của chúng tôi."
+      }
     }
   }
 }

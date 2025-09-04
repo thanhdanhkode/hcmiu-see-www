@@ -13,8 +13,8 @@ export const Footer = () => {
   return (
     <footer className="overflow-hidden w-full">
       <div className="mx-auto px-3 max-w-screen-xl select-none">
-        <div className="grid grid-cols-7 py-3 pb-12 gap-3">
-          <div className="col-span-5 flex gap-3 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-7 py-3 pb-12 gap-6 xs:gap-3">
+          <div className="col-span-5 flex flex-wrap gap-3 items-center">
             <div className="size-18 p-2 flex items-center justify-center rounded-full [&>svg]:size-10 aspect-square border-4 border-[#670210] text-[#670210]">
               <Headset />
             </div>
@@ -26,9 +26,9 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div className="col-span-2">
             <div className="font-medium">{t('SocialMedia.title')}</div>
-            <div className="flex items-center gap-2 mt-1">
+            <div className="flex items-center gap-2 mt-1 flex-wrap">
               <MdiFacebook />
               <MdiYoutube />
               <MdiZalo />
@@ -37,8 +37,8 @@ export const Footer = () => {
           </div>
         </div>
         <Separator />
-        <div className="grid grid-cols-7 py-6">
-          <div className="col-span-3 flex flex-col">
+        <div className="grid grid-cols-1 tiny:grid-cols-2 sm:grid-cols-7 gap-6 xs:gap-0 py-6">
+          <div className="tiny:col-span-2 sm:col-span-3 flex flex-col">
             <div className="flex gap-1">
               <Image
                 src={'/assets/IULogo.png'}
@@ -53,7 +53,7 @@ export const Footer = () => {
                 height={72}
               />
             </div>
-            <div className="text-sm text-nowrap mt-2 font-medium">
+            <div className="text-sm tiny:text-nowrap mt-2 font-medium">
               <div>{t('Logo.UniversityName')}</div>
               <div>{t('Logo.DepartmentName')}</div>
             </div>
@@ -64,7 +64,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="tiny:col-span-1 sm:col-span-2">
             <div className="font-medium">
               <span>{t('Service.title')}</span>
             </div>
@@ -113,7 +113,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-span-2">
+          <div className="tiny:col-span-1 sm:col-span-2">
             <div className="font-medium">
               <span>{t('Other.title')}</span>
             </div>

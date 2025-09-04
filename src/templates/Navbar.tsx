@@ -1,6 +1,5 @@
 'use client'
 
-import Link from '@/components/Link'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,13 +7,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from '@/components/ui/navigation-menu'
-import { useRouter } from '@/i18n/navigation'
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 import { cva, VariantProps } from 'class-variance-authority'
-import { useLocale, useTranslations } from 'next-intl'
+import { House, LogIn, Menu, Newspaper, Search } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { MenuDrawer } from './MenuDrawer'
 
 const ListItemVariants = cva('text-sm', {
   variants: {
@@ -58,9 +58,7 @@ const ListItem = ({
 }
 
 export const Navbar = () => {
-  const locale = useLocale()
   const t = useTranslations('Header')
-  const router = useRouter()
   return (
     <NavigationMenu
       viewport={false}
@@ -68,11 +66,8 @@ export const Navbar = () => {
     >
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger
-            className="bg-transparent"
-            onClick={() => router.replace('/', { locale })}
-          >
-            {t('Navigation.Home.title')}
+          <NavigationMenuTrigger className="bg-transparent">
+            <Link href={'/'}>{t('Navigation.Home.title')}</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-max lg:grid-cols-[.75fr_0.05fr_1fr]">
@@ -176,5 +171,35 @@ export const Navbar = () => {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
+  )
+}
+
+export const NavbarMobile = () => {
+  const t = useTranslations('NavigationMobile')
+  return (
+    <div className="fixed bottom-0 w-full sm:hidden drop-shadow-md border-t bg-white">
+      <div className="grid grid-cols-5 h-full">
+        <div className="flex text-xs gap-1 font-medium [&_svg]:size-5 py-2 flex-col items-center justify-center hover:bg-neutral-300 transition-all duration-100">
+          <House />
+          <span>{t('Home.title')}</span>
+        </div>
+        <MenuDrawer title={t('Menu.title')} />
+        <div className="flex flex-col items-center justify-center transition-all duration-100">
+          <div className="relative ">
+            <div className="absolute -left-7 -top-12 flex justify-center items-center bg-[#670210] rounded-full text-white p-3 size-14">
+              <Search />
+            </div>
+          </div>
+        </div>
+        <div className="flex text-xs gap-1 font-medium [&_svg]:size-5 py-2 flex-col items-center justify-center hover:bg-neutral-300 transition-all duration-100">
+          <Newspaper />
+          <span>{t('Bulletin.title')}</span>
+        </div>
+        <div className="flex text-xs gap-1 font-medium [&_svg]:size-5 py-2 flex-col items-center justify-center hover:bg-neutral-300 transition-all duration-100">
+          <LogIn />
+          <span>{t('Login.title')}</span>
+        </div>
+      </div>
+    </div>
   )
 }
