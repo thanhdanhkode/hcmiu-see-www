@@ -1,4 +1,7 @@
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { Header } from '@/features/Landing/Header'
+import { Footer } from '@/templates/Footer'
+import { NavbarMobile } from '@/templates/Navbar'
 import { NextIntlClientProvider } from 'next-intl'
 import { Roboto, Poppins } from 'next/font/google'
 
@@ -28,16 +31,17 @@ export default async function PublicRootLayout({
       suppressHydrationWarning
     >
       <head />
-      <body
-        className={` ${roboto.className} ${roboto.variable} antialiased relative w-screen h-screen`}
-      >
+      <body className={` ${roboto.className} ${roboto.variable} antialiased relative w-screen h-screen`}>
         <NextIntlClientProvider>
           <ThemeProvider
             attribute={'class'}
             defaultTheme={'light'}
             enableSystem
           >
+            <Header />
             {children}
+            <NavbarMobile />
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

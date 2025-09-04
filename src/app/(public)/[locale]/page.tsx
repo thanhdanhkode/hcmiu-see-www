@@ -6,12 +6,12 @@ import { Header } from '@/features/Landing/Header'
 import { Section } from '@/features/Landing/Section'
 import { Footer } from '@/templates/Footer'
 import { Gallery } from '@/templates/Gallery'
+import { NavbarMobile } from '@/templates/Navbar'
 import Image from 'next/image'
 
 export default function () {
   return (
     <>
-      <Header />
       <div className="px-3 xl:px-6 mt-3 w-full relative">
         <AspectRatio
           ratio={24 / 10}
@@ -23,32 +23,34 @@ export default function () {
             }
             alt=""
             fill
-            objectFit="cover"
+            className="object-cover"
           />
         </AspectRatio>
       </div>
       <Section>
-        <Course courses={[
-          {
-            id: 'EE',
-            image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/image-668202985-949781.png',
-          },
-          {
-            id: 'AC',
-            image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/Electrical-Engineering.jpg',
-          },
-          {
-            id: 'Twining',
-            image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/Electrical-Engineering.jpg',
-          },
-          {
-            id: 'MS',
-            image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/Electrical-Engineering.jpg',
-          },
-        ]}/>
+        <Course
+          courses={[
+            {
+              id: 'EE',
+              image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/image-668202985-949781.png',
+            },
+            {
+              id: 'AC',
+              image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/Electrical-Engineering.jpg',
+            },
+            {
+              id: 'Twining',
+              image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/Electrical-Engineering.jpg',
+            },
+            {
+              id: 'MS',
+              image: 'https://see.hcmiu.edu.vn/wp-content/uploads/2022/12/Electrical-Engineering.jpg',
+            },
+          ]}
+        />
       </Section>
       <Section>
-        <div className="w-full flex items-center justify-center font-bold text-4xl my-6">
+        <div className="w-full flex items-center justify-center font-bold text-2xl sm:text-4xl my-6">
           <span>Gallery</span>
         </div>
         <Gallery
@@ -60,8 +62,8 @@ export default function () {
           ]}
         />
       </Section>
-      <div className="h-24"></div>
-      <Footer />
+      <div className="h-12"></div>
+      <div className="h-16 sm:hidden"></div>
     </>
   )
 }
