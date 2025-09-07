@@ -4,6 +4,7 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const nextConfig: NextConfig = {
   images: {
     dangerouslyAllowSVG: true,
+    remotePatterns: [new URL('https://see.hcmiu.edu.vn/**'), new URL('https://w.ladicdn.com/**')],
   },
 }
 
